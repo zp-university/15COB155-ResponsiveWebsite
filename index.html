@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="./resources/css/main.css">
+    <script src="./vendors/jquery/jquery-2.2.1.min.js" type="text/javascript"></script>
+    <script src="./resources/js/weather.js" type="text/javascript"></script>
+    <script src="./vendors/simple-weather/jquery.simple-weather.min.js" type="text/javascript"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>My E-learning Journey of Mobile Application Development</title>
+</head>
+<body>
+<div>
+    <div id="header">
+        <picture id="logo">
+            <source media="(min-width:768px)" srcset="resources/img/logo.png" class="logo-image">
+            <img src="resources/img/logo-small.png" alt="Loughborough University Logo" class="logo-image">
+        </picture>
+        <div id="title-container">
+            <div id="title-text">My E-learning Journey of Mobile Application Development</div>
+        </div>
+    </div>
+    <div class="row" id="nav">
+        <div class="col-lg-2 col-md-4 col-sm-6 col-xs-6">
+            Home
+            <a href="./index.html">
+                <span class="link-spanner"></span>
+            </a>
+        </div>
+        <div class="col-lg-3 col-md-4 col-sm-6 col-xs-6">
+            Events
+            <a href="./index.html#events">
+                <span class="link-spanner"></span>
+            </a>
+        </div>
+        <div class="col-lg-2 col-md-4 col-sm-6 col-xs-6">
+            Updates
+            <a href="./index.html#updates">
+                <span class="link-spanner"></span>
+            </a>
+        </div>
+        <div class="col-lg-3 col-md-6 col-sm-6 col-xs-6">
+            Weather
+            <a href="./index.html#weather">
+                <span class="link-spanner"></span>
+            </a>
+        </div>
+        <div class="col-lg-2 col-md-6 col-sm-12 col-xs-12">
+            Guestbook
+            <a href="./guestbook.html">
+                <span class="link-spanner"></span>
+            </a>
+        </div>
+    </div>
+    <div class="row" id="info-section">
+        <div class="col-lg-8 col-md-8 col-sm-12 col-xs-12" id="large-image">
+            <img src="resources/img/large-image.jpg" class="large-image">
+        </div>
+        <div id="info-text" class="row col-lg-4 col-md-4 col-sm-12 col-xs-12">
+            <div class="col-lg-12 col-md-12 col-sm-6 col-xs-12" id="about-me">
+                <b>About Me:</b>
+                <br>Zack Pollard
+                <br>B424338
+            </div>
+            <div id="objectives" class="col-lg-12 col-md-12 col-sm-6 col-xs-12">
+                <b>Objectives:</b>
+                <ul>
+                    <li>Make website responsive</li>
+                    <li>Get a first</li>
+                    <li>Get coursework done before deadline</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div id="events">
+        <h2>Events</h2>
+        <table class="scrollable" border="1" id="events-table">
+            <thead>
+                <tr>
+                    <th>Events</th>
+                    <th>Time</th>
+                    <th>Venue</th>
+                    <th>Price</th>
+                    <th>Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Union Jazz</td>
+                    <td>8PM</td>
+                    <td>Room 1</td>
+                    <td>£5.50</td>
+                    <td>A night of Jazz put on by </td>
+                </tr>
+                <tr>
+                    <td>LSUCS LAN 58</td>
+                    <td>6PM</td>
+                    <td>James France</td>
+                    <td>£10.00</td>
+                    <td>A weekend of gaming in James France with lots of food and drink to buy!</td>
+                </tr>
+                <tr>
+                    <td>Mobile Dev Coursework Hand-In</td>
+                    <td>4PM</td>
+                    <td>The Internet!</td>
+                    <td>Free!</td>
+                    <td>Many days of work have led to this moment... it all comes down to this...</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div id="updates">
+        <h2>Learning Updates:</h2>
+        <div>
+            <ul>
+                <li><b>01/01/1970 - Start of time as we know it!</b></li>
+                some notes
+            </ul>
+        </div>
+        <div>
+            <ul>
+                <li><b>01/01/1970 - Start of time as we know it!</b></li>
+                some notes
+            </ul>
+        </div>
+    </div>
+    <h2>Weather</h2>
+    <div class="row" id="weather">
+        <h3>Loughborough</h3>
+        <div class="row col-lg-6 col-md-6 col-sm-12 col-xs-12" id="main-location">
+            <h3>Loughborough</h3>
+        </div>
+        <div class="row col-lg-6 col-md-6 col-sm-12 col-xs-12" id="user-location"><h3>Your Location</h3></div>
+    </div>
+</div>
+</body>
+</html>

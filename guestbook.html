@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="./resources/css/main.css">
+    <script src="./vendors/jquery/jquery-2.2.1.min.js" type="text/javascript"></script>
+    <script src="./resources/js/guestbook.js" type="text/javascript"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>My E-learning Journey of Mobile Application Development</title>
+</head>
+<body>
+<div>
+    <div id="header">
+        <picture id="logo">
+            <source media="(min-width:768px)" srcset="resources/img/logo.png" class="logo-image">
+            <img src="resources/img/logo-small.png" alt="Loughborough University Logo" class="logo-image">
+        </picture>
+        <div id="title-container">
+            <div id="title-text">My E-learning Journey of Mobile Application Development</div>
+        </div>
+    </div>
+    <div class="row" id="nav">
+        <div class="col-lg-2 col-md-4 col-sm-6 col-xs-6">
+            Home
+            <a href="./index.html">
+                <span class="link-spanner"></span>
+            </a>
+        </div>
+        <div class="col-lg-3 col-md-4 col-sm-6 col-xs-6">
+            Events
+            <a href="./index.html#events">
+                <span class="link-spanner"></span>
+            </a>
+        </div>
+        <div class="col-lg-2 col-md-4 col-sm-6 col-xs-6">
+            Updates
+            <a href="./index.html#updates">
+                <span class="link-spanner"></span>
+            </a>
+        </div>
+        <div class="col-lg-3 col-md-6 col-sm-6 col-xs-6">
+            Weather
+            <a href="./index.html#weather">
+                <span class="link-spanner"></span>
+            </a>
+        </div>
+        <div class="col-lg-2 col-md-6 col-sm-12 col-xs-12">
+            Guestbook
+            <a href="./guestbook.html">
+                <span class="link-spanner"></span>
+            </a>
+        </div>
+    </div>
+    <h2>Messages</h2>
+
+    <div id="messages"></div>
+
+    <!--<div id="add-message-container">
+        <table class="row col-lg-12 col-md-12 col-sm-12 col-xs-12">
+            <tr class="row col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <td id="picture-text" class="text-side col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                    Picture:
+                </td>
+                <td class="row col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                    <div id="avatar-container" class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+
+                    </div>
+                    <div id="add-avatar-button" class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                        <button type="button">Choose Avatar</button>
+                    </div>
+                </td>
+            </tr>
+            <tr class="row col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <td id="nickname-text" class="text-side col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                    Nickname:
+                </td>
+                <td class="row col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                    <input id="nickname-input" type="text">
+                </td>
+            </tr>
+            <tr class="row col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <td id="geo-location-text" class="text-side col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                    Add geo-location:
+                </td>
+                <td class="row col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                    <button id="geo-location-button">Add geo-location</button>
+                </td>
+            </tr>
+            <tr class="row col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <td id="age-text" class="text-side col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                    Add age:
+                </td>
+                <td class="row col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                    <select id="age-select"></select>
+                </td>
+            </tr>
+            <tr class="row col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <td id="gender-text" class="text-side col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                    Add age:
+                </td>
+                <td class="row col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                    <input id="gender-m" name="gender" type="radio" value="m" class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
+                    <div id="male-text" class="col-lg-10 col-md-10 col-sm-10 col-xs-10">Male</div>
+                    <input id="gender-f" name="gender" type="radio" value="f" class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
+                    <div id="female-text" class="col-lg-10 col-md-10 col-sm-10 col-xs-10">Female</div>
+                    <input id="gender-o" name="gender" type="radio" value="o" class="col-lg-2 col-md-2 col-sm-2 col-xs-2" checked>
+                    <div id="other-text" class="col-lg-10 col-md-10 col-sm-10 col-xs-10">Other</div>
+                </td>
+            </tr>
+            <tr class="row col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <td id="where-from-text" class="text-side col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                    Where are you from:
+                </td>
+                <td class="row col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                    <input id="where-from-input" type="text">
+                </td>
+            </tr>
+            <tr class="row col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <td id="message-text" class="text-side col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                    Message:
+                </td>
+                <td class="row col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                    <textarea id="message-area"></textarea>
+                </td>
+            </tr>
+            <tr class="row col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <td id="new-entry-text" class="text-side col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                    Add new entry:
+                </td>
+                <td class="row col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                    <button id="message-submit-button" type="button" onclick="addNewComment()">Submit</button>
+                </td>
+            </tr>
+        </table>
+    </div>-->
+
+    <div id="add-message">
+        <div class="row">
+            <div id="picture" class="row col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <div id="picture-text" style="vertical-align: bottom;" class="form-text col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                    Picture:
+                </div>
+                <div class="row col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                    <div id="profile-picture-display" class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                        <img id="profile-picture-preview" src="data:image/png;base64,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">
+                    </div>
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                        <input id="profile-picture-chooser" type="file" onchange="previewFile()">
+                    </div>
+                </div>
+            </div>
+            <div id="name" class="row col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <div id="name-text" class="form-text col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                    Name:
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                    <input id="name-input" type="text">
+                </div>
+            </div>
+            <div id="geo-location" class="row col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <div id="geo-text" class="form-text col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                    Geo-Location:
+                </div>
+                <div class="row col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                    <div id="geo-button-container" class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                        <button id="geo-button" onclick="addGeoLocation()">Add geo-location</button>
+                    </div>
+                    <div id="geo-display" class="col-lg-12 col-md-12 col-sm-12 col-xs-12"></div>
+                </div>
+            </div>
+            <div id="age" class="row col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <div id="age-text" class="form-text col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                    Age:
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                    <select id="age-selector"></select>
+                </div>
+            </div>
+            <div id="gender" class="row col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <div id="gender-text" class="form-text col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                    Gender:
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                    <select id="gender-selector">
+                        <option selected="selected" value="Not specified">Don't want to specify</option>
+                        <option value="M">Male</option>
+                        <option value="F">Female</option>
+                    </select>
+                </div>
+            </div>
+                <div id="location" class="row col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <div id="location-text" class="form-text col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                    Where do you live:
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                    <input id="location-input" type="text">
+                </div>
+            </div>
+            <div id="message-area" class="row col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <div id="message-label" class="form-text col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                    Message:
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                    <textarea id="message-input"></textarea>
+                </div>
+            </div>
+            <div id="submit" class="row col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <div id="submit-text" class="form-text col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                    Submit Message:
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                    <button id="submit-button" onclick="addNewMessage()">Submit</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
